@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
+
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #1f2937; /* gray-800 */
+  background-color: #fff;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-open-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  background-color: #7f1d1d; /* red-900 */
+  color: #fbbf24; /* yellow-400 */
+}
+
+header a {
+  color: #fbbf24;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header a:hover {
+  color: #fcd34d; /* yellow-300 */
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+section#menu {
+  font-family: 'Open Sans', sans-serif;
+}
+
+#menu h3, #menu h4 {
+  color: #7f1d1d; /* red-900 */
+}
+
+#menu article {
+  background-color: #fff;
+  border: 2px solid #fbbf24; /* yellow-400 */
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.3), 0 4px 6px -2px rgba(251, 191, 36, 0.2);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+#menu article:hover {
+  box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.5), 0 10px 10px -5px rgba(251, 191, 36, 0.4);
+}
+
+#menu ul, #menu ol {
+  margin-left: 0;
+  padding-left: 1.25rem;
+}
+
+#menu li {
+  border-bottom: 1px solid #fef3c7; /* yellow-100 */
+  padding: 0.5rem 0;
+  overflow: hidden;
+}
+
+#menu li:last-child {
+  border-bottom: none;
+}
+
+#menu div.flex {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: #7f1d1d;
+  justify-content: space-between;
+}
+
+#menu p {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  color: #92400e; /* yellow-800 */
+}
+
+#menu p.italic {
+  font-style: italic;
+  color: #78350f; /* yellow-900 */
+}
+
+#gallery img {
+  border: 2px solid #fbbf24;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(251, 191, 36, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+  box-shadow: 0 10px 15px rgba(251, 191, 36, 0.5);
+}
+
+section#order a {
+  background-color: #fbbf24;
+  color: #7f1d1d;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(251, 191, 36, 0.3);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+section#order a:hover {
+  background-color: #fcd34d;
+}
+
+footer {
+  background-color: #7f1d1d;
+  color: #fbbf24;
+  padding: 1.5rem 0;
+}
+
+footer a {
+  color: #fbbf24;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #fcd34d;
+}
