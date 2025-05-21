@@ -126,6 +126,11 @@
       border: 3px solid #f87171; /* red-400 */
       object-fit: cover;
       box-shadow: 0 2px 6px rgba(185, 28, 28, 0.4);
+      transition: transform 0.3s ease;
+    }
+    #menu .main-course-wrapper li img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px 3px #fbbf24;
     }
     #menu .main-course-wrapper li div {
       flex-grow: 1;
@@ -150,6 +155,16 @@
       color: #b91c1c; /* red-700 */
       font-family: 'Playfair Display', serif;
     }
+    #gallery img {
+      border: 2px solid #fbbf24;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(251, 191, 36, 0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+    #gallery img:hover {
+      box-shadow: 0 0 15px 3px #fbbf24;
+      transform: scale(1.05);
+    }
     /* Responsive adjustments */
     @media (max-width: 768px) {
       #menu .menu-grid {
@@ -170,7 +185,7 @@
 </head>
 <body class="bg-white bg-custom-pattern bg-cover bg-center text-gray-900 font-sans">
 
-<header class="w-full bg-red-900 p-6 shadow-md flex items-center justify-between rounded-none border-4 border-yellow-400">
+<header class="w-full bg-red-900 p-6 shadow-md flex items-center justify-between rounded-none border-4 border-yellow-400" style="position: sticky; top: 0; z-index: 1000;">
   <img src="img/fk.jpg" alt="Logo" class="h-40 rounded-md border-4 border-yellow-400 shadow-lg">
   <h1 class="text-5xl font-bold font-playfair text-yellow-400 flex-grow text-center">Filipino Kuisine</h1>
   <nav class="space-x-8 text-yellow-400 font-semibold flex">
@@ -190,6 +205,28 @@
   <h3 class="text-4xl font-bold mb-4 font-playfair text-red-900">About Us</h3>
   <p class="max-w-2xl mx-auto text-red-800">We serve the best of Filipino cuisine in Mackay. Each dish is made with love and tradition.</p>
   <p class="max-w-2xl mx-auto text-red-800 mt-4">We offer dine-in, takeaways, and catering services to satisfy your cravings.</p>
+</section>
+
+<section id="event-catering" class="py-16 bg-red-50 bg-opacity-90 text-center">
+  <h3 class="text-4xl font-bold mb-8 font-playfair text-red-900">Events & Catering</h3>
+  <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+    <div class="event-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+      <i class="fa-solid fa-birthday-cake fa-3x text-red-700 mb-4"></i>
+      <h4 class="text-xl font-semibold mb-2 text-red-900">Birthday Parties</h4>
+      <p class="text-red-800">Celebrate your special day with our delicious Filipino dishes and catering services.</p>
+    </div>
+    <div class="event-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+      <i class="fa-solid fa-users fa-3x text-red-700 mb-4"></i>
+      <h4 class="text-xl font-semibold mb-2 text-red-900">Group Reservations</h4>
+      <p class="text-red-800">Perfect for family gatherings, office parties, and other group events.</p>
+    </div>
+    <div class="event-card bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+      <i class="fa-solid fa-calendar-days fa-3x text-red-700 mb-4"></i>
+      <h4 class="text-xl font-semibold mb-2 text-red-900">Special Events</h4>
+      <p class="text-red-800">We cater to weddings, anniversaries, and other memorable occasions.</p>
+    </div>
+  </div>
+  <a href="#contact" class="inline-block mt-8 bg-yellow-400 text-red-900 px-6 py-3 rounded shadow hover:bg-yellow-300 font-semibold">Contact Us</a>
 </section>
 
 <section id="menu" class="py-16 container mx-auto px-4 font-open-sans">
@@ -379,7 +416,7 @@
   <div class="grid md:grid-cols-3 gap-6 px-4">
     <div>
       <img src="img/Chicken & Pork Adobo.jpg" alt="Adobo" class="rounded shadow-lg border-4 border-yellow-400" />
-      <div class="specialty-label">Adobo</div>
+      <div class="specialty-label">Pork & Chicken Adobo</div>
     </div>
     <div>
       <img src="img/Sinigang na bangus.jpg" alt="Sinigang" class="rounded shadow-lg border-4 border-yellow-400" />
@@ -395,7 +432,7 @@
 <section id="order" class="bg-red-50 bg-opacity-90 py-16 text-center">
   <h3 class="text-3xl font-bold mb-4 font-playfair text-red-900">Order Now</h3>
   <p class="mb-6 text-red-800">Online payments accepted. Fast delivery in Mackay.</p>
-  <a href="https://wa.me/your-number" target="_blank" class="bg-yellow-400 text-red-900 px-6 py-2 rounded shadow hover:bg-yellow-300 font-semibold">Order via WhatsApp</a>
+  <a href=" https://m.me/236071716247213" target="_blank" class="bg-yellow-400 text-red-900 px-6 py-2 rounded shadow hover:bg-yellow-300 font-semibold">Order via Messenger</a>
 </section>
 
 <section id="contact" class="py-16 container mx-auto px-4 bg-red-50 bg-opacity-90">
@@ -403,7 +440,7 @@
   <div class="text-center mb-6 text-red-800">
     <p>172 Shakespeare St, Mackay QLD 4740, Australia</p>
     <p>Open Daily: 11:00 AM - 9:00 PM</p>
-    <p>📞 +61 439 065 665 | 📘 <a href="https://www.facebook.com/profile.php?id=61555915462317" target="_blank" class="underline text-yellow-400 hover:text-yellow-300">Facebook Page</a></p>
+    <p>📞 <a href="tel:+61439065665" class="underline hover:text-yellow-300">+61 439 065 665</a> | 📧 <a href="mailto:filipinokuisine@gmail.com" class="underline hover:text-yellow-300">filipinokuisine@gmail.com</a> | <a href="https://www.facebook.com/profile.php?id=61555915462317" target="_blank" class="underline text-white-400 hover:text-white-300"><i class="fa-brands fa-facebook"></i> Filipino Kuisine</a></p>
   </div>
   <div class="w-full h-64">
     <iframe class="w-full h-full rounded" src="https://maps.google.com/maps?q=172%20Shakespeare%20St,%20Mackay%20QLD%204740,%20Australia&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" allowfullscreen></iframe>
@@ -411,11 +448,11 @@
 </section>
 
 <footer class="bg-red-900 py-6 text-center text-yellow-400 border-t-4 border-yellow-400">
-  <p>Follow us on <a href="https://instagram.com/yourprofile" target="_blank" class="underline hover:text-yellow-300">Instagram</a></p>
-  <p class="text-sm mt-2">&copy; 2025 Filipino Kuisine. All rights reserved.</p>
+  <p>Follow us on <a href="https://www.facebook.com/profile.php?id=61555915462317" target="_blank" class="underline hover:text-yellow-300"><i class="fa-brands fa-facebook"></i> Facebook</a></p>
+  <p class="text-sm mt-2">&copy; 2024 Filipino Kuisine. All rights reserved.</p>
 </footer>
 
-<a href="hhttps://www.facebook.com/messages/t/236071716247213" class="fixed bottom-20 right-5 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 shadow-lg" target="_blank">Messenger</a>
+<a href=" https://m.me/236071716247213" class="fixed bottom-20 right-5 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 shadow-lg" target="_blank">Messenger</a>
 <a href="https://wa.me/your-number" class="fixed bottom-5 right-5 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600" target="_blank">WhatsApp</a>
 <a href="#top" class="fixed bottom-5 left-5 bg-gray-700 text-white p-3 rounded-full hover:bg-gray-800">↑</a>
 

@@ -1,7 +1,10 @@
 body {
   font-family: 'Open Sans', Arial, sans-serif;
   color: #1f2937; /* gray-800 */
-  background-color: #fff;
+  background-image: url('../img/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   line-height: 1.6;
   margin: 0;
   padding: 0;
@@ -18,6 +21,9 @@ body {
 header {
   background-color: #7f1d1d; /* red-900 */
   color: #fbbf24; /* yellow-400 */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header a {
@@ -52,11 +58,12 @@ section#menu {
   border-radius: 0.5rem;
   box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.3), 0 4px 6px -2px rgba(251, 191, 36, 0.2);
   padding: 1.5rem;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #menu article:hover {
-  box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.5), 0 10px 10px -5px rgba(251, 191, 36, 0.4);
+  box-shadow: 0 0 15px 3px #fbbf24;
+  transform: scale(1.05);
 }
 
 #menu ul, #menu ol {
@@ -92,15 +99,24 @@ section#menu {
   color: #78350f; /* yellow-900 */
 }
 
+#gallery .specialty-label {
+  font-weight: 700;
+  text-align: center;
+  margin-top: 0.5rem;
+  color: #b91c1c; /* red-700 */
+  font-family: 'Playfair Display', serif;
+}
+
 #gallery img {
   border: 2px solid #fbbf24;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(251, 191, 36, 0.3);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 #gallery img:hover {
-  box-shadow: 0 10px 15px rgba(251, 191, 36, 0.5);
+  box-shadow: 0 0 15px 3px #fbbf24;
+  transform: scale(1.05);
 }
 
 section#order a {
@@ -131,4 +147,72 @@ footer a {
 
 footer a:hover {
   color: #fcd34d;
+}
+
+#event-catering {
+  background-color: #fef2f2; /* red-50 */
+  border: 3px solid #b91c1c; /* red-700 */
+  border-radius: 0.75rem;
+  padding: 2rem 1rem;
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+}
+
+#event-catering h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b91c1c;
+  margin-bottom: 1.5rem;
+}
+
+.event-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(185, 28, 28, 0.3);
+  padding: 1.5rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.event-card:hover {
+  box-shadow: 0 0 15px 3px #fbbf24;
+  transform: scale(1.05);
+}
+
+.event-card i {
+  color: #b91c1c;
+}
+
+.event-card h4 {
+  color: #991b1b;
+  font-weight: 700;
+}
+
+.event-card p {
+  color: #7f1d1d;
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #menu .menu-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  #menu .app-dessert-wrapper,
+  #menu .main-course-wrapper {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .app-dessert-container {
+    max-width: 100%;
+    padding: 1rem;
+  }
+  #event-catering {
+    max-width: 100%;
+    padding: 1rem;
+  }
 }
